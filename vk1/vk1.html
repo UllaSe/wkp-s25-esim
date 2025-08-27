@@ -5,31 +5,43 @@
 		<meta charset="UTF-8" />
 		<style>
 			/*////////////////////
-        // Positioning items    
-        //////////////////////
-        
-        Reset *
-        Display: inline vs block
-        https://www.w3schools.com/cssref/pr_class_display.asp
-    
-        Box-sizing
-        https://www.w3schools.com/css/css3_box-sizing.asp
-        
-        Using percentages and max-width
-        https://www.w3schools.com/cssref/css_units.asp
-    
-        Float and clear
-        https://www.w3schools.com/cssref/pr_class_float.asp
-        
-        Flexbox - https://www.w3schools.com/css/css3_flexbox.asp
-        
-        Absolute/Relative positioning
-        https://www.w3schools.com/cssref/pr_class_position.asp
-          
-        Centering
-        https://www.w3schools.com/css/css_align.asp
-        
-        */
+			     // Positioning items
+			     //////////////////////
+
+			     Reset *
+			     Display: inline vs block
+			     https://www.w3schools.com/cssref/pr_class_display.asp
+
+			     Box-sizing
+			     https://www.w3schools.com/css/css3_box-sizing.asp
+
+			     Using percentages and max-width
+			     https://www.w3schools.com/cssref/css_units.asp
+
+			     Float and clear
+			     https://www.w3schools.com/cssref/pr_class_float.asp
+
+			     Flexbox - https://www.w3schools.com/css/css3_flexbox.asp
+
+			     Absolute/Relative positioning
+			     https://www.w3schools.com/cssref/pr_class_position.asp
+
+			     Centering
+			     https://www.w3schools.com/css/css_align.asp
+
+			     */
+
+			:root {
+				--commonbg: brown;
+				--p_10: 10px; /* 10px padding */
+				--defaultfont: helvetica, sans-serif;
+				/* CSS HEX */
+				--mustard: #fbd453ff;
+				--non-photo-blue: #b2e4f5ff;
+				--mikado-yellow: #fac329ff;
+				--floral-white: #fcfaf1ff;
+				--amber: #f5bb0eff;
+			}
 
 			* {
 				box-sizing: border-box;
@@ -113,7 +125,7 @@
 			} */
 
 			footer {
-				background-color: brown;
+				background-color: var(--commonbg);
 				color: aliceblue;
 				text-align: center;
 				padding-top: 40px;
@@ -157,7 +169,7 @@
 				);
 			}
 			main {
-				background-color: cadetblue;
+				background-color: var(--commonbg);
 				margin: auto;
 				margin-top: 30px;
 				padding: 10px;
@@ -175,7 +187,7 @@
 			.box7 {
 				width: 80px;
 				height: 80px;
-				background-color: rgb(198, 43, 226);
+				background-color: var(--commonbg);
 				position: fixed;
 				top: 50%;
 				right: 0;
@@ -193,6 +205,21 @@
 				position: sticky;
 				top: 0;
 			}
+			p::first-line {
+				font-size: 50px;
+				color: blue;
+			}
+			/* unvisited link */
+			a:link,
+			a:visited {
+				color: green;
+			}
+
+			/* mouse over link */
+			a:hover,
+			a:active {
+				color: red;
+			}
 		</style>
 	</head>
 
@@ -206,6 +233,8 @@
 		</nav>
 		<!-- Float continues, clearing -->
 
+		<a href="#">LINKKI</a>
+
 		<main>
 			<div class="box6">img</div>
 			<div class="box7">IG</div>
@@ -217,7 +246,7 @@
 
 			<p>
 				<img class="img-myllypuro" src="img/myllypuro-terassi.webp" alt="Myllypuron terassi" />
-				<span style="font-size: 20px; color: black">Lorem ipsum dolor sit</span>
+				<!-- <span style="font-size: 20px; color: black">Lorem ipsum dolor sit</span> -->
 				amet consectetur adipisicing elit. Reiciendis, delectus. Ad, explicabo hic nihil earum
 				accusamus, autem rerum dignissimos quibusdam eos facilis voluptatum possimus veritatis dicta
 				eaque obcaecati laudantium eligendi! Qui obcaecati soluta nam eveniet fuga quasi repellendus
