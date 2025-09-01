@@ -1,0 +1,41 @@
+.myForm input {
+    margin: 0 .25rem;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid white;
+}
+
+.myForm input:not([type="submit"]) {
+    border-left: 10px solid;
+    transition: border-color 1s ease-out;
+    border-bottom: 1px solid gray;
+
+}
+
+input[type="submit"] {
+    margin-top: 30px;
+}
+
+::placeholder {
+    color: rgba(165, 101, 101, 0.662);
+}
+
+.myForm input:optional {
+    border-left-color: rgb(140, 140, 140);
+}
+/* .myForm input:required {
+    border-left-color: rgb(255, 0, 0);
+} */
+.myForm input:invalid {
+    border-left-color: orange;
+}
+.myForm input:valid {
+     border-left-color: green;
+}
+
+
+
+.myForm label {
+    display: block;
+    margin-top: 20px;
+}

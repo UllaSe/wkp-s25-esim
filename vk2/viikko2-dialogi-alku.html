@@ -13,6 +13,7 @@
 		<title>Lounari | Etsi lähimmät ruokalistat</title>
 
 		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/forms.css" />
 		<!-- Käy tämä -->
 		<link rel="stylesheet" href="css/normalize.css" />
 		<script src="js/dialog.js" defer></script>
@@ -37,12 +38,43 @@
 				<!-- <dialog closedby="any"></dialog> -->
 				<dialog>
 					<p>Greetings, one and all!</p>
-					<p>fbszfdbfdzbf</p>
-					<ul>
-						<li>sjehgfjhe</li>
-					</ul>
-					<form action="">
-						<input type="text" autofocus />
+
+					<form class="myForm" action="">
+						<h3 class="main_cl">Rekisteröidy tiedoillasi</h3>
+						<fieldset>
+							<label for="yourName">Sukunimi, minimi 3 kirjainta:</label>
+							<input
+								type="text"
+								id="yourName"
+								name="yourName"
+								placeholder="Sukunimi"
+								minlength="3"
+								max="30"
+								required
+							/>
+
+							<!-- @metropolia.fi -->
+							<label for="yourEmail">Email osoite (@metropolia.fi):</label>
+							<input
+								type="email"
+								id="yourEmail"
+								name="yourEmail"
+								pattern=".+@metropolia\.fi"
+								required
+							/>
+
+							<!-- yhden ison kirjaimen, sekä yhden numeron, mmin 8 pitkä -->
+							<label for="passWord">Salasana:</label>
+							<input
+								type="password"
+								id="passWord"
+								name="passWord"
+								pattern="^(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$"
+								required
+							/>
+							<br />
+							<input type="submit" value="Submit" />
+						</fieldset>
 					</form>
 					<button>CLOSE</button>
 				</dialog>
