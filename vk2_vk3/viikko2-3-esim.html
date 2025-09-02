@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta
+			name="description"
+			content="Palvelu etsii lähelläsi olevat lounaspaikat, sekä näyttää niiden päivittäisen
+    lounaslistan. Viikottaiset lounaslistat ovat myös käytettävissäsi"
+		/>
+
+		<title>Lounari | Etsi lähimmät ruokalistat</title>
+
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/forms.css" />
+		<!-- Käy tämä -->
+		<link rel="stylesheet" href="css/normalize.css" />
+		<script src="js/dialog.js" defer></script>
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<li><a href="" id="logo">Lounari.</a></li>
+				<li><a href="#jumbotron" class="selected">Etusivu</a></li>
+				<li><a href="#lunch" class="">Ruokalistat</a></li>
+				<li><a href="#about-info" class="">Yhteystiedot</a></li>
+			</ul>
+			<span class="header-links"></span>
+		</nav>
+		<!-- Main area with infotext and menus -->
+		<main>
+			<section id="spacer">
+				<div id="hero-image"></div>
+
+				<button id="showdialog" style="margin-bottom: 30px">Show the dialog</button>
+
+				<!-- <dialog closedby="any"></dialog> -->
+				<dialog>
+					<p>Greetings, one and all!</p>
+
+					<form class="myForm" action="">
+						<h3 class="main_cl">Rekisteröidy tiedoillasi</h3>
+						<fieldset>
+							<label for="yourName">Sukunimi, minimi 3 kirjainta:</label>
+							<input
+								type="text"
+								id="yourName"
+								name="yourName"
+								placeholder="Sukunimi"
+								minlength="3"
+								max="30"
+								required
+							/>
+
+							<!-- @metropolia.fi -->
+							<label for="yourEmail">Email osoite (@metropolia.fi):</label>
+							<input
+								type="email"
+								id="yourEmail"
+								name="yourEmail"
+								pattern=".+@metropolia\.fi"
+								required
+							/>
+
+							<!-- yhden ison kirjaimen, sekä yhden numeron, mmin 8 pitkä -->
+							<label for="passWord">Salasana:</label>
+							<input
+								type="password"
+								id="passWord"
+								name="passWord"
+								pattern="^(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$"
+								required
+							/>
+							<br />
+							<input type="submit" value="Submit" />
+						</fieldset>
+					</form>
+					<button>CLOSE</button>
+				</dialog>
+			</section>
+
+			<section class="about-us" id="about-info">
+				<div>
+					<img src="img/chili-pepper.png" alt="chili" class="chili" />
+					<img
+						src="img/myllypuro-terassi.webp"
+						alt="Myllypuron terassi"
+						class="fl restaurant-inside-img"
+					/>
+					<h3 class="main_cl">LISÄÄ MEISTÄ</h3>
+					<h2 class="black_cl bolder mb-10">Tämä on meidän tarinamme</h2>
+					<p>
+						Lounarin tuotevalikoma on omassa keittiössä valmistettu. Käytämme aina tuoreita
+						raaka-aineita ja otamme huomioon erityisruokavaliot. Valikoimamme vaihtelee sesonkien ja
+						saatavuuden mukaan päivittäin. Tavoitteenamme on Metropolian kampusuudistuksen myötä
+						palvella tulevaisuudessa yhdenvertaisesti kaikkia metropolialaisia.
+					</p>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<p>Copyright, Meitsi</p>
+		</footer>
+	</body>
+</html>
